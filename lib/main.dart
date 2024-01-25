@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
     var appState = Provider.of<MyAppState>(context);
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Color(0xFF7E21CC),
         appBarTheme: AppBarTheme(
