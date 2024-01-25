@@ -40,25 +40,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       theme: ThemeData(
-//         primaryColor: Color(0xFF7E21CC), // Change the primary color
-//         // hintColor: Color(0xFFE0CFA2),
-//         // scaffoldBackgroundColor: Color(0xFF172B61), // Background color
-//         appBarTheme: AppBarTheme(
-//           backgroundColor: Color.fromARGB(255, 45, 107, 56),
-//         ),
-//       ),
-//       home: ChangeNotifierProvider(
-//         create: (BuildContext context) => MyAppState(),
-//         child: MyHomePage(),
-//       ),
-//     );
-//   }
-// }
+
 class MyAppState extends ChangeNotifier {
   var bookmarks = [];
   bool darkMode = false;
@@ -78,78 +60,15 @@ class MyAppState extends ChangeNotifier {
   }
 }
 
-// class MyAppState extends ChangeNotifier {
-//   var bookmarks=[];
-//   void toggleBookmark(dynamic p,dynamic q) {
 
-//     if (bookmarks.contains(p)) {
-//       bookmarks.remove(p);
-//     } else {
-//       bookmarks.add(p);
-//     }
-//     notifyListeners();
-//   }
-// }
+
 class MyHomePage extends StatefulWidget {
   @override
   
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-// class _MyHomePageState extends State<MyHomePage> {
-//   var selectedIndex = 0;
 
-//   @override
-  
-//   Widget build(BuildContext context) {
-//     Widget page;
-//     switch (selectedIndex) {
-//       case 0:
-//         page = MainPage(); // Main page
-//         break;
-//       case 1:
-//         page = BookmarksPage(); // Bookmarks
-//         break;
-//       default:
-//         throw UnimplementedError('No widget for $selectedIndex');
-//     }
-//     return Scaffold(
-//       appBar: AppBar(title: Text('NEWS READER APP'),backgroundColor: Color(0xFFD4D7DF),),
-      
-//       body:  Row(
-//           children: [
-//             SafeArea(
-//               child: NavigationRail(
-//                 extended: false,
-//                 destinations: [
-//                   NavigationRailDestination(
-//                     icon: Icon(Icons.home),
-//                     label: const Text('Home'),
-//                   ),
-//                   NavigationRailDestination(
-//                     icon: const Icon(Icons.bookmark),
-//                     label: const Text('Bookmarks'),
-//                   ),
-//                 ],
-//                 selectedIndex: selectedIndex,
-//                 onDestinationSelected: (value) {
-//                   setState(() {
-//                     selectedIndex = value;
-//                   });
-//                 },
-//               ),
-//              ),
-//             Expanded(
-//                 child: Container(
-//                   color: Theme.of(context).colorScheme.primaryContainer,
-//                   child: page,
-//                 ),
-//               ),
-//           ],
-//         ),
-//       );
-//       }
-// }
 class _MyHomePageState extends State<MyHomePage> {
   var selectedIndex = 0;
 
